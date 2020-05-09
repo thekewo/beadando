@@ -18,6 +18,8 @@ import java.io.IOException;
 public class LoginController {
 
     @FXML
+    public Button registerButton;
+    @FXML
     private TextField username;
     @FXML
     private TextField password;
@@ -49,4 +51,14 @@ public class LoginController {
         }
     }
 
+    public void Register(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Main.class.getResource("/fxml/registration.fxml"));
+
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+        stage.setTitle("Register");
+        stage.setResizable(false);
+        stage.setScene(new Scene(root));
+        stage.show();
+    }
 }

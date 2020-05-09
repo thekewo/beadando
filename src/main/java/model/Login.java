@@ -1,7 +1,6 @@
 package model;
 
 public class Login {
-
     public boolean isUsernameInDatabase(String userName){
         return false;
     }
