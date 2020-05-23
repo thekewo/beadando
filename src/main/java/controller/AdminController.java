@@ -110,4 +110,18 @@ public class AdminController {
         userList.getItems().clear();
         userList.getItems().addAll(userDB.Search(searchUsername.getText()));
     }
+
+    public void isAdminSearch(ActionEvent event) throws FileNotFoundException, JAXBException {
+        UserDB userDB = JAXBHelper.fromXML(UserDB.class , new FileInputStream("users.xml"));
+
+        userList.getItems().clear();
+        userList.getItems().addAll(userDB.GetAdmins());
+    }
+
+    public void isUserSearch(ActionEvent event) throws FileNotFoundException, JAXBException {
+        UserDB userDB = JAXBHelper.fromXML(UserDB.class , new FileInputStream("users.xml"));
+
+        userList.getItems().clear();
+        userList.getItems().addAll(userDB.GetNonAdmins());
+    }
 }

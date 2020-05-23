@@ -80,4 +80,28 @@ public class UserDB {
 
         return result;
     }
+
+    public List<String> GetAdmins(){
+        var result = new ArrayList<String>();
+        for (User item: users){
+            if(item.isAdmin())
+                result.add(item.getUsername());
+        }
+        if(result == null)
+            return GetUsernames();
+
+        return result;
+    }
+
+    public List<String> GetNonAdmins(){
+        var result = new ArrayList<String>();
+        for (User item: users){
+            if(!item.isAdmin())
+                result.add(item.getUsername());
+        }
+        if(result == null)
+            return GetUsernames();
+
+        return result;
+    }
 }

@@ -14,11 +14,13 @@
       <TextField fx:id="movieDate" layoutX="341.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="date" />
       <Text fx:id="errorMessage" fill="RED" layoutX="125.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <ListView fx:id="userList" layoutX="25.0" layoutY="14.0" prefHeight="307.0" prefWidth="200.0" />
-      <Button fx:id="addUserButton" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" text="Add" onAction="#Add"/>
-      <Button fx:id="removeUserButton" layoutX="242.0" layoutY="52.0" mnemonicParsing="false" text="Remove" onAction="#Remove"/>
-      <TextField fx:id="username" layoutX="288.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" promptText="username" />
-      <TextField fx:id="password" layoutX="366.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" promptText="password" />
-      <TextField fx:id="searchUsername" layoutX="25.0" layoutY="328.0" prefHeight="25.0" prefWidth="136.0" promptText="username" />
-      <Button fx:id="Search" layoutX="173.0" layoutY="328.0" mnemonicParsing="false" text="Search" onAction="#Search"/>
+      <Button fx:id="addUserButton" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onAction="#Add" text="Add" />
+      <Button fx:id="removeUserButton" layoutX="292.0" layoutY="14.0" mnemonicParsing="false" onAction="#Remove" text="Remove" />
+      <TextField fx:id="username" layoutX="243.0" layoutY="48.0" prefHeight="25.0" prefWidth="78.0" promptText="username" />
+      <TextField fx:id="password" layoutX="321.0" layoutY="48.0" prefHeight="25.0" prefWidth="78.0" promptText="password" />
+      <TextField fx:id="searchUsername" layoutX="243.0" layoutY="143.0" prefHeight="25.0" prefWidth="136.0" promptText="username" />
+      <Button fx:id="Search" layoutX="241.0" layoutY="109.0" mnemonicParsing="false" onAction="#Search" text="Search" />
+      <Button fx:id="isAdminButton" layoutX="241.0" layoutY="188.0" mnemonicParsing="false" onAction="#isAdminSearch" text="Show admin users" />
+      <Button fx:id="isUserButton" layoutX="241.0" layoutY="222.0" mnemonicParsing="false" onAction="#isUserSearch" text="Show users" />
    </children>
 </Pane>
