@@ -1,42 +1,56 @@
 package model;
 
-import javafx.scene.control.TextField;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.UUID;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Version;
+import static java.util.UUID.randomUUID;
 
-
-@Entity
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(propOrder = {"id", "username", "password", "created"})
 public class User {
-    @Id
+    private UUID id;
     private String username;
-    @Column(nullable = false)
     private String password;
-    @Version
-    private long version;
+    private Date created;
 
     public  User(){};
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.created = CreateDate();
+        this.id = CreateId();
     }
 
-    public String GetUsername(String username){
-        return this.username;
+    public Date CreateDate(){
+        Calendar calendar = Calendar.getInstance();
+        Date startDate = new Date(calendar.getTime().getTime());
+        return startDate;
     }
 
-    public String GetPassword(String username){
-        return this.password;
+    public UUID CreateId(){
+        return randomUUID();
     }
-
-    public void SetUsername(String username){
-        this.username = username;
-    }
-
-   public void SetPassword(String password){
-       this.password = password;
-   }
 }

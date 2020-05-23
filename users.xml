@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<userDB>
+    <users>
+        <user>
+            <id>189e3d88-791f-484b-b503-f3374a66cf12</id>
+            <username>asd</username>
+            <password>asd</password>
+            <created>2020-05-23T13:09:55.827+02:00</created>
+        </user>
+        <user>
+            <id>8e8c4b6d-feb6-47fd-867b-6bb8edf16fd5</id>
+            <username>wasdd</username>
+            <password>wasdd</password>
+            <created>2020-05-23T13:10:03.164+02:00</created>
+        </user>
+        <user>
+            <id>d7a9cbe0-9cf4-4bea-8403-b5386dca0829</id>
+            <username>wat</username>
+            <password>wat</password>
+            <created>2020-05-23T13:16:55.207+02:00</created>
+        </user>
+        <user>
+            <id>1acc3642-4469-4595-aa8e-e9542e9ba969</id>
+            <username>tasd</username>
+            <password>asd</password>
+            <created>2020-05-23T13:33:30.154+02:00</created>
+        </user>
+    </users>
+</userDB>
