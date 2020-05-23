@@ -1,0 +1,22 @@
+-classpath
+'C:/Users/Koós Zoltán/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.3/jakarta.xml.bind-api-2.3.3.jar;C:/Users/Koós Zoltán/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.2/jakarta.activation-api-1.2.2.jar;C:/Users/Koós Zoltán/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar;C:/Users/Koós Zoltán/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar;C:/Users/Koós Zoltán/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar;C:/Users/Koós Zoltán/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar;C:/Users/Koós Zoltán/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-controls/11.0.2/javafx-controls-11.0.2.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-controls/11.0.2/javafx-controls-11.0.2-win.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-graphics/11.0.2/javafx-graphics-11.0.2.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-graphics/11.0.2/javafx-graphics-11.0.2-win.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-base/11.0.2/javafx-base-11.0.2.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-base/11.0.2/javafx-base-11.0.2-win.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-fxml/11.0.2/javafx-fxml-11.0.2.jar;C:/Users/Koós Zoltán/.m2/repository/org/openjfx/javafx-fxml/11.0.2/javafx-fxml-11.0.2-win.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'E:/SZOFTV/beadando/src/main/java;E:/SZOFTV/beadando/target/generated-sources/annotations'
+-author
+-bottom
+'Copyright &#169; 2020. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'E:/SZOFTV/beadando/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'beadando 1.0 API'
+-use
+-version
+-windowtitle
+'beadando 1.0 API'
