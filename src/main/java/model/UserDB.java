@@ -11,6 +11,14 @@ public class UserDB {
         return users;
     }
 
+    public User getUser(String username){
+        for (User item: users){
+            if(username.equals(item.getUsername()))
+                return item;
+        }
+        return null;
+    }
+
     @XmlElementWrapper(name = "users")
     @XmlElement(name = "user")
     private List<User> users = new ArrayList<User>();

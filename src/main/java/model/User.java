@@ -12,14 +12,23 @@ import static java.util.UUID.randomUUID;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"id", "username", "password", "created"})
+@XmlType(propOrder = {"id", "username", "password", "created", "admin"})
 public class User {
     private UUID id;
     private String username;
     private String password;
     private Date created;
+    private boolean admin;
 
     public  User(){};
+
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
+    }
 
     public String getUsername() {
         return username;
@@ -42,6 +51,7 @@ public class User {
         this.password = password;
         this.created = CreateDate();
         this.id = CreateId();
+        this.admin = false;
     }
 
     public Date CreateDate(){

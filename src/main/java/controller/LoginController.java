@@ -5,14 +5,17 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import jaxb.JAXBHelper;
 import main.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.event.ActionEvent;
-import model.Login;
+import model.UserDB;
 
+import javax.xml.bind.JAXBException;
+import java.io.FileInputStream;
 import java.io.IOException;
 
 public class LoginController {
@@ -28,15 +31,18 @@ public class LoginController {
     @FXML
     private Label errorMessage;
 
-    private Login login;
 
-    @FXML
-    public void initialize(){
-        login = new Login();
-    }
+    public void Login(ActionEvent event) throws Exception {
+        UserDB userDB = JAXBHelper.fromXML(UserDB.class , new FileInputStream("users.xml"));
+        var user = userDB.getUser(username.getText());
+        errorMessage.setText("");
 
-    public void Login(ActionEvent event) throws IOException {
-        if(login.isUsernameAndPasswordCorrect(username.getText(), password.getText())){
+        if(user == null)
+            errorMessage.setText("Incorrect username.");
+        else if(!password.getText().equals(user.getPassword())){
+            errorMessage.setText("Incorrect password.");
+        }
+        else{
             Parent root = FXMLLoader.load(Main.class.getResource("/fxml/menu.fxml"));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -45,9 +51,6 @@ public class LoginController {
             stage.setResizable(false);
             stage.setScene(new Scene(root));
             stage.show();
-        }
-        else {
-            errorMessage.setText("Error");
         }
     }
 
