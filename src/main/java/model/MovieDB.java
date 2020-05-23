@@ -37,4 +37,33 @@ public class MovieDB {
         }
         return false;
     }
+
+    public List<String> GetFavList(User user){
+        var result = new ArrayList<String>();
+        for (Movie item: movies){
+            if(item.getFav().contains(user.getUsername()))
+                result.add(item.getTitle());
+        }
+        return result;
+    }
+
+    public List<String> Search(String s){
+        var result = new ArrayList<String>();
+        for (Movie item: movies){
+            if(item.getTitle().contains(s))
+                result.add(item.getTitle());
+        }
+        if(result == null)
+            return GetTitles();
+
+        return result;
+    }
+
+    public List<String> GetTitles(){
+        var result = new ArrayList<String>();
+        for (Movie item: movies){
+                result.add(item.getTitle());
+        }
+        return result;
+    }
 }

@@ -6,48 +6,65 @@
             <title>test2</title>
             <date>2000-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav/>
         </movie>
         <movie>
             <id>e2ec9bb8-9e50-411d-9995-61b6bf6c5cd0</id>
             <title>wasd</title>
             <date>1990-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav>
+                <user>admin</user>
+            </fav>
         </movie>
         <movie>
             <id>454e0581-8acf-4a6a-9dcd-e363a8f8633f</id>
             <title>asd</title>
             <date>2003-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav/>
         </movie>
         <movie>
             <id>23421295-e847-412e-9e12-64a1aef1a6c3</id>
             <title>www</title>
             <date>1997-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav>
+                <user>admin</user>
+            </fav>
         </movie>
         <movie>
             <id>86a4ed3d-3a90-48eb-8b52-581e933fbd6e</id>
             <title>admintest</title>
             <date>1775-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav>
+                <user>admin</user>
+                <user>wasdd</user>
+            </fav>
         </movie>
         <movie>
             <id>226d5188-7e96-4b67-a7ca-5c814d762f5a</id>
             <title>lul</title>
             <date>5544-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav>
+                <user>admin</user>
+            </fav>
         </movie>
         <movie>
             <id>64500670-e025-4f02-ac02-67ee23e95162</id>
             <title>awe</title>
             <date>21432-01-01T00:00:00+01:00</date>
             <rating>0</rating>
+            <fav/>
         </movie>
         <movie>
             <id>578266ad-1588-469a-98ea-54a35bceeecd</id>
             <title>dafq</title>
             <date>2003-01-01T00:00:00+01:00</date>
             <rating>2</rating>
+            <fav/>
         </movie>
     </movies>
 </movieDB>

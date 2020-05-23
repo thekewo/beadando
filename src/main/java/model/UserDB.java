@@ -38,6 +38,14 @@ public class UserDB {
         return false;
     }
 
+    public User GetLoggedInUser(){
+        for (User item: users){
+            if(item.isLoggedIn())
+            return item;
+        }
+        return null;
+    }
+
     public boolean IsLoggedInUserAdmin(){
         for (User item: users){
             if(item.isLoggedIn() && item.isAdmin())

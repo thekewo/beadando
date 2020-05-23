@@ -1,20 +1,15 @@
 package model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.UUID;
+import java.util.*;
 
 import static java.util.UUID.randomUUID;
 
 @XmlRootElement
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(propOrder = {"id", "title", "date", "rating"})
+@XmlType(propOrder = {"id", "title", "date", "rating", "fav"})
 public class Movie {
 
     private UUID id;
@@ -44,6 +39,22 @@ public class Movie {
 
     public void setRating(Integer rating) {
         this.rating = rating;
+    }
+
+    public List<String> getFav() {
+        return fav;
+    }
+
+    public void setFav(List<String> fav) {
+        this.fav = fav;
+    }
+
+    @XmlElementWrapper(name = "fav")
+    @XmlElement(name = "user")
+    private List<String> fav = new ArrayList<>();
+
+    public Movie(String user){
+        fav.add(user);
     }
 
     public  Movie(){}

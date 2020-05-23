@@ -27,12 +27,9 @@ import java.io.IOException;
 import java.text.ParseException;
 
 public class MenuController {
-    @FXML
-    public Text errorMessage;
+
     @FXML
     public Button admin;
-    @FXML
-    public Button rate;
     @FXML
     public TextField movieTitle;
     @FXML
@@ -43,6 +40,12 @@ public class MenuController {
     public Text year;
     @FXML
     public Text votes;
+    @FXML
+    public TextField searchTitle;
+    @FXML
+    public ListView favList;
+    @FXML
+    public Button addFavButton;
     @FXML
     private ListView<String> moviesList;
 
@@ -55,6 +58,8 @@ public class MenuController {
         for (Movie movie: movieDB.getMovies()) {
             moviesList.getItems().add(movie.getTitle());
         }
+
+        favList.getItems().addAll(movieDB.GetFavList(userDB.GetLoggedInUser()));
 
         if(userDB.IsLoggedInUserAdmin())
             admin.setVisible(true);
@@ -106,11 +111,32 @@ public class MenuController {
         var item = ((ListView<String>)mouseEvent.getSource()).getSelectionModel().getSelectedItem();
         MovieDB movieDB = JAXBHelper.fromXML(MovieDB.class , new FileInputStream("movies.xml"));
         var movie = movieDB.getMovie(item);
-        var date = movie.getDate();
 
         if(movie != null){
             year.setText(movie.getDate().toString().split("-")[0]);
             votes.setText(movie.getRating().toString());
         }
+    }
+
+    public void Search(ActionEvent event) throws FileNotFoundException, JAXBException {
+        MovieDB movieDB = JAXBHelper.fromXML(MovieDB.class , new FileInputStream("movies.xml"));
+
+        moviesList.getItems().clear();
+        moviesList.getItems().addAll(movieDB.Search(searchTitle.getText()));
+    }
+
+    public void AddFav(ActionEvent event) throws FileNotFoundException, JAXBException {
+        var item = moviesList.getSelectionModel().getSelectedItem();
+        MovieDB movieDB = JAXBHelper.fromXML(MovieDB.class , new FileInputStream("movies.xml"));
+        UserDB userDB = JAXBHelper.fromXML(UserDB.class , new FileInputStream("users.xml"));
+        var movie = movieDB.getMovie(item);
+        var user = userDB.GetLoggedInUser();
+
+        movie.getFav().add(user.getUsername());
+
+        JAXBHelper.toXML(userDB, new FileOutputStream("users.xml"));
+        JAXBHelper.toXML(movieDB, new FileOutputStream("movies.xml"));
+
+        favList.getItems().add(movie.getTitle());
     }
 }
