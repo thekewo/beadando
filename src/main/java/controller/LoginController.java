@@ -16,6 +16,7 @@ import model.UserDB;
 
 import javax.xml.bind.JAXBException;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class LoginController {
@@ -43,6 +44,9 @@ public class LoginController {
             errorMessage.setText("Incorrect password.");
         }
         else{
+            userDB.getUser(user.getUsername()).setLoggedIn(true);
+            JAXBHelper.toXML(userDB, new FileOutputStream("users.xml"));
+
             Parent root = FXMLLoader.load(Main.class.getResource("/fxml/menu.fxml"));
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

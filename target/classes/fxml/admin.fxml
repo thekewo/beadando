@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+   <children>
+      <Button fx:id="backButton" layoutX="529.0" layoutY="361.0" mnemonicParsing="false" onAction="#Back" text="Back" />
+      <Button fx:id="addButton" layoutX="437.0" layoutY="328.0" mnemonicParsing="false" onAction="#AddMovie" text="Add" />
+      <TextField fx:id="movieTitle" layoutX="243.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="title" />
+      <TextField fx:id="movieDate" layoutX="341.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="date" />
+      <Text fx:id="errorMessage" fill="RED" layoutX="125.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+   </children>
+</Pane>

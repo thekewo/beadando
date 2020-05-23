@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Text?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MenuController">
    <children>
-      <Button fx:id="logoutButton" layoutX="514.0" layoutY="353.0" mnemonicParsing="false" text="Log out" onAction="#LogOut"/>
+      <Button fx:id="logoutButton" layoutX="529.0" layoutY="361.0" mnemonicParsing="false" onAction="#LogOut" text="Log out" />
+      <ListView fx:id="moviesList" layoutX="14.0" layoutY="14.0" prefHeight="300.0" prefWidth="350.0" onMouseClicked="#Click" />
+      <Text fx:id="errorMessage" fill="RED" layoutX="125.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="admin" layoutX="502.0" layoutY="25.0" mnemonicParsing="false" onAction="#toAdmin" text="Admin Panel" visible="false" />
+      <Button fx:id="voteDown" layoutX="317.0" layoutY="322.0" mnemonicParsing="false" onAction="#Rate" text="Down" />
+      <TextField fx:id="movieTitle" layoutX="181.0" layoutY="322.0" prefHeight="25.0" prefWidth="96.0" promptText="Title" />
+      <Button fx:id="voteUp" layoutX="285.0" layoutY="322.0" mnemonicParsing="false" onAction="#Rate" text="Up" />
+      <Text layoutX="128.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vote for" />
+      <Text layoutX="381.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Year" />
+      <Text layoutX="381.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Votes" />
+      <Text fx:id="year" layoutX="414.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="votes" layoutX="414.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" />
    </children>
 </Pane>

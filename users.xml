@@ -7,6 +7,7 @@
             <password>admin</password>
             <created>2020-05-23T13:09:55.827+02:00</created>
             <admin>true</admin>
+            <loggedIn>false</loggedIn>
         </user>
         <user>
             <id>8e8c4b6d-feb6-47fd-867b-6bb8edf16fd5</id>
@@ -14,6 +15,7 @@
             <password>wasdd</password>
             <created>2020-05-23T13:10:03.164+02:00</created>
             <admin>false</admin>
+            <loggedIn>false</loggedIn>
         </user>
         <user>
             <id>d7a9cbe0-9cf4-4bea-8403-b5386dca0829</id>
@@ -21,6 +23,7 @@
             <password>wat</password>
             <created>2020-05-23T13:16:55.207+02:00</created>
             <admin>false</admin>
+            <loggedIn>false</loggedIn>
         </user>
         <user>
             <id>1acc3642-4469-4595-aa8e-e9542e9ba969</id>
@@ -28,6 +31,7 @@
             <password>asd</password>
             <created>2020-05-23T13:33:30.154+02:00</created>
             <admin>false</admin>
+            <loggedIn>false</loggedIn>
         </user>
     </users>
 </userDB>

@@ -19,6 +19,8 @@ public class Movie {
 
     private UUID id;
     private String title;
+    private String date;
+    private Integer rating;
 
     public String getTitle() {
         return title;
@@ -28,11 +30,11 @@ public class Movie {
         this.title = title;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -44,17 +46,12 @@ public class Movie {
         this.rating = rating;
     }
 
-    private Date date;
-    private Integer rating;
+    public  Movie(){}
 
-    public Movie(String title, Integer date) throws ParseException {
+    public Movie(String title, String date) throws ParseException {
         this.id = randomUUID();
         this.title = title;
-        this.date = CreateDate(date);
-    }
-
-    public Date CreateDate(Integer val) throws ParseException {
-        SimpleDateFormat originalFormat = new SimpleDateFormat("yyyy");
-        return originalFormat.parse(val.toString());
+        this.date = date;
+        this.rating = 0;
     }
 }

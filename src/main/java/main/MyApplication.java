@@ -10,8 +10,8 @@ import javafx.stage.Stage;
 public class MyApplication extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(Main.class.getResource("/fxml/login.fxml"));
-        stage.setTitle("Login");
+        Parent root = FXMLLoader.load(Main.class.getResource("/fxml/menu.fxml"));
+        stage.setTitle("Menu");
         stage.setResizable(false);
         stage.setScene(new Scene(root));
         stage.show();

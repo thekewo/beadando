@@ -37,4 +37,19 @@ public class UserDB {
         }
         return false;
     }
+
+    public boolean IsLoggedInUserAdmin(){
+        for (User item: users){
+            if(item.isLoggedIn() && item.isAdmin())
+                return true;
+        }
+        return false;
+    }
+
+    public void LogoutUsers(){
+        for (User item: users){
+            if(item.isLoggedIn())
+                item.setLoggedIn(false);
+        }
+    }
 }
