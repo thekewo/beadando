@@ -60,4 +60,24 @@ public class UserDB {
                 item.setLoggedIn(false);
         }
     }
+
+    public List<String> GetUsernames(){
+        var result = new ArrayList<String>();
+        for (User item: users){
+            result.add(item.getUsername());
+        }
+        return result;
+    }
+
+    public List<String> Search(String s){
+        var result = new ArrayList<String>();
+        for (User item: users){
+            if(item.getUsername().contains(s))
+                result.add(item.getUsername());
+        }
+        if(result == null)
+            return GetUsernames();
+
+        return result;
+    }
 }

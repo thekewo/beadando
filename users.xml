@@ -33,5 +33,13 @@
             <admin>false</admin>
             <loggedIn>false</loggedIn>
         </user>
+        <user>
+            <id>debdc20a-e905-48a3-814d-8f7e6fe8b375</id>
+            <username>test</username>
+            <password>test</password>
+            <created>2020-05-23T21:17:12.791+02:00</created>
+            <admin>false</admin>
+            <loggedIn>false</loggedIn>
+        </user>
     </users>
 </userDB>

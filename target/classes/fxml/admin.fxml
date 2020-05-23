@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
@@ -12,5 +13,12 @@
       <TextField fx:id="movieTitle" layoutX="243.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="title" />
       <TextField fx:id="movieDate" layoutX="341.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="date" />
       <Text fx:id="errorMessage" fill="RED" layoutX="125.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <ListView fx:id="userList" layoutX="25.0" layoutY="14.0" prefHeight="307.0" prefWidth="200.0" />
+      <Button fx:id="addUserButton" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" text="Add" onAction="#Add"/>
+      <Button fx:id="removeUserButton" layoutX="242.0" layoutY="52.0" mnemonicParsing="false" text="Remove" onAction="#Remove"/>
+      <TextField fx:id="username" layoutX="288.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" promptText="username" />
+      <TextField fx:id="password" layoutX="366.0" layoutY="14.0" prefHeight="25.0" prefWidth="78.0" promptText="password" />
+      <TextField fx:id="searchUsername" layoutX="25.0" layoutY="328.0" prefHeight="25.0" prefWidth="136.0" promptText="username" />
+      <Button fx:id="Search" layoutX="173.0" layoutY="328.0" mnemonicParsing="false" text="Search" onAction="#Search"/>
    </children>
 </Pane>
