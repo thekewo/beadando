@@ -50,7 +50,7 @@ public class User {
         this.username = username;
         this.password = password;
         this.created = CreateDate();
-        this.id = CreateId();
+        this.id = randomUUID();
         this.admin = false;
     }
 
@@ -58,9 +58,5 @@ public class User {
         Calendar calendar = Calendar.getInstance();
         Date startDate = new Date(calendar.getTime().getTime());
         return startDate;
-    }
-
-    public UUID CreateId(){
-        return randomUUID();
     }
 }
