@@ -2,21 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f12b21df-a361-4d06-ac5c-6d6e58786b31" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/MenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/MenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/jaxb/JAXBHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/jaxb/JAXBHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/MovieDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MovieDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/AdminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/AdminController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/MenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/controller/MenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/jaxb/JAXBHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/jaxb/JAXBHelper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/Movie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/Movie.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/model/MovieDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/model/MovieDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MovieDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/MovieDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MovieTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/MovieTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/UserDBTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/beadando-1.0-SNAPSHOT-shaded.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/beadando-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/beadando.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-beadando-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/options" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/options" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/site/apidocs/packages" beforeDir="false" afterPath="$PROJECT_DIR$/target/site/apidocs/packages" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,13 +64,14 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\SZOFTV\beadando\src\test\resources" />
       <recent name="E:\SZOFTV\beadando" />
       <recent name="E:\SZOFTV\beadando\src\main\resources\xml" />
       <recent name="E:\SZOFTV\beadando\src\main\java\model" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="model" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
@@ -149,22 +151,22 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="740" y="279" key="FileChooserDialogImpl/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590212610055" />
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1590301841070">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom" timestamp="1590305216850">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590301841070" />
-    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1590301841070">
+    <state width="1877" height="285" key="GridCell.Tab.0.bottom/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590305216850" />
+    <state width="1877" height="285" key="GridCell.Tab.0.center" timestamp="1590305216850">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590301841070" />
-    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1590301841070">
+    <state width="1877" height="285" key="GridCell.Tab.0.center/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590305216850" />
+    <state width="1877" height="285" key="GridCell.Tab.0.left" timestamp="1590305216850">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590301841070" />
-    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1590301841070">
+    <state width="1877" height="285" key="GridCell.Tab.0.left/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590305216850" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right" timestamp="1590305216850">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590301841070" />
+    <state width="1877" height="285" key="GridCell.Tab.0.right/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590305216850" />
     <state width="1877" height="351" key="GridCell.Tab.1.bottom" timestamp="1590263697848">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -185,10 +187,10 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="490" y="179" key="Maven.ArtifactSearchDialog/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590264584480" />
-    <state x="461" y="167" key="SettingsEditor" timestamp="1590218617031">
+    <state x="461" y="167" key="SettingsEditor" timestamp="1590304395430">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590218617031" />
+    <state x="461" y="167" key="SettingsEditor/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590304395430" />
     <state x="2063" y="0" width="1261" height="725" maximized="true" key="dock-window-1" timestamp="1590296332080">
       <screen x="1920" y="0" width="2560" height="1050" />
     </state>
@@ -201,9 +203,9 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="666" y="153" key="refactoring.ChangeSignatureDialog/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590228286883" />
-    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1590233867883">
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup" timestamp="1590304440388">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590233867883" />
+    <state x="623" y="231" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050/1920.0.2560.1050@0.0.1920.1050" timestamp="1590304440388" />
   </component>
 </project>

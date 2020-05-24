@@ -1,0 +1,11 @@
+main\MyApplication.class
+controller\AdminController.class
+model\MovieDB.class
+main\Main.class
+model\Movie.class
+controller\LoginController.class
+model\UserDB.class
+jaxb\JAXBHelper.class
+controller\MenuController.class
+model\User.class
+controller\RegistrationController.class
