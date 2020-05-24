@@ -8,11 +8,15 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 /**
  * Helper class to work with JAXB.
  */
 public class JAXBHelper {
 
+    private static Logger logger = LoggerFactory.getLogger(JAXBHelper.class);
     /**
      * Serializes an object to XML. The output document is written in UTF-8 encoding.
      *
@@ -28,6 +32,7 @@ public class JAXBHelper {
             marshaller.setProperty(Marshaller.JAXB_ENCODING, "UTF-8");
             marshaller.marshal(o, os);
         } catch(JAXBException e) {
+            logger.error("JAXBException", e);
             throw e;
         }
     }
@@ -46,6 +51,7 @@ public class JAXBHelper {
             Unmarshaller unmarshaller = context.createUnmarshaller();
             return (T) unmarshaller.unmarshal(is);
         } catch(JAXBException e) {
+            logger.error("JAXBException", e);
             throw e;
         }
     }

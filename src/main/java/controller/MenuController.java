@@ -26,6 +26,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.text.ParseException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class MenuController {
 
     @FXML
@@ -49,6 +52,8 @@ public class MenuController {
     @FXML
     private ListView<String> moviesList;
 
+    private static Logger logger = LoggerFactory.getLogger(MenuController.class);
+
     @FXML
     public void initialize() throws FileNotFoundException, JAXBException {
         moviesList.getSelectionModel().setSelectionMode(SelectionMode.SINGLE);
@@ -56,22 +61,28 @@ public class MenuController {
         UserDB userDB = JAXBHelper.fromXML(UserDB.class , new FileInputStream("users.xml"));
 
         for (Movie movie: movieDB.getMovies()) {
+            logger.info("Movie added to moviesList: {}", movie.getTitle());
             moviesList.getItems().add(movie.getTitle());
         }
 
         favList.getItems().addAll(movieDB.GetFavList(userDB.GetLoggedInUser()));
+        logger.info("Favlist loaded.");
 
-        if(userDB.IsLoggedInUserAdmin())
+        if(userDB.IsLoggedInUserAdmin()) {
+            logger.info("Logged in user is admin.");
             admin.setVisible(true);
+        }
     }
 
     public void LogOut(ActionEvent event) throws IOException, JAXBException {
-        String resourceName = "user.xml";
-        ClassLoader classLoader = getClass().getClassLoader();
         UserDB userDB = JAXBHelper.fromXML(UserDB.class , new FileInputStream("users.xml"));
+        logger.info("UserDB loaded.");
         userDB.LogoutUsers();
+        logger.info("Users logged out.");
         JAXBHelper.toXML(userDB, new FileOutputStream("users.xml"));
+        logger.info("UserDB saved");
 
+        logger.info("Changing scene.");
         Parent root = FXMLLoader.load(Main.class.getResource("/fxml/login.fxml"));
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -83,6 +94,8 @@ public class MenuController {
     }
 
     public void toAdmin(ActionEvent event) throws IOException {
+        logger.info("Changing scene.");
+        try{
         Parent root = FXMLLoader.load(Main.class.getResource("/fxml/admin.fxml"));
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -90,21 +103,33 @@ public class MenuController {
         stage.setTitle("Admin Panel");
         stage.setResizable(false);
         stage.setScene(new Scene(root));
-        stage.show();
+        stage.show();}
+        catch (IOException e) {
+            logger.error("Changing scene error.", e);
+            throw e;
+        }
     }
 
     public void Rate(ActionEvent event) throws FileNotFoundException, JAXBException {
-        var e = (Button)event.getSource();
+        logger.info("Rating movie.");
+        try {
+            var e = (Button) event.getSource();
 
-        MovieDB movieDB = JAXBHelper.fromXML(MovieDB.class , new FileInputStream("movies.xml"));
-        var movie = movieDB.getMovie(movieTitle.getText());
+            MovieDB movieDB = JAXBHelper.fromXML(MovieDB.class, new FileInputStream("movies.xml"));
+            var movie = movieDB.getMovie(movieTitle.getText());
 
-        if(e.equals(voteUp))
-        movie.setRating(movie.getRating()+1);
-        else
-            movie.setRating(movie.getRating()-1);
+            if (e.equals(voteUp))
+                movie.setRating(movie.getRating() + 1);
+            else
+                movie.setRating(movie.getRating() - 1);
 
-        JAXBHelper.toXML(movieDB, new FileOutputStream("movies.xml"));
+            JAXBHelper.toXML(movieDB, new FileOutputStream("movies.xml"));
+        }
+        catch (Exception e)
+        {
+            logger.error("Rating movie error.", e);
+            throw e;
+        }
     }
 
     public void Click(MouseEvent mouseEvent) throws FileNotFoundException, JAXBException {
@@ -119,10 +144,20 @@ public class MenuController {
     }
 
     public void Search(ActionEvent event) throws FileNotFoundException, JAXBException {
+        logger.info("Searching movie.");
+        try{
         MovieDB movieDB = JAXBHelper.fromXML(MovieDB.class , new FileInputStream("movies.xml"));
 
         moviesList.getItems().clear();
+        logger.info("moviesList cleared.");
         moviesList.getItems().addAll(movieDB.Search(searchTitle.getText()));
+        logger.info("Added search result to moviesList.");
+        }
+        catch (Exception e)
+        {
+            logger.error("Searching movie error.", e);
+            throw e;
+        }
     }
 
     public void AddFav(ActionEvent event) throws FileNotFoundException, JAXBException {

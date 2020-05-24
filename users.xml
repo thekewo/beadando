@@ -33,5 +33,13 @@
             <admin>false</admin>
             <loggedIn>false</loggedIn>
         </user>
+        <user>
+            <id>99f62908-1176-47fb-bb3d-2f69d3aa1934</id>
+            <username>tuz</username>
+            <password>ert</password>
+            <created>2020-05-24T07:47:47.466+02:00</created>
+            <admin>false</admin>
+            <loggedIn>false</loggedIn>
+        </user>
     </users>
 </userDB>
