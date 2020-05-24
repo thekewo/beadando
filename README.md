@@ -8,6 +8,7 @@ If the user is an admin then an Admin panel is available.
 In the Admin panel the admin can see the list of users and able to add or remove users.
 The admin can search from the users by their username or search for the admin or non admin users.
 The admin can add movies to the database.
+
 ###Usage
 Execute either of the following commands in the main directory:
 
