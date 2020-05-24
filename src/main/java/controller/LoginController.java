@@ -24,6 +24,8 @@ public class LoginController {
     @FXML
     public Button registerButton;
     @FXML
+    public Button closeButton;
+    @FXML
     private TextField username;
     @FXML
     private TextField password;
@@ -67,5 +69,10 @@ public class LoginController {
         stage.setResizable(false);
         stage.setScene(new Scene(root));
         stage.show();
+    }
+
+    public void Close(ActionEvent event) {
+        Stage stage = (Stage) closeButton.getScene().getWindow();
+        stage.close();
     }
 }

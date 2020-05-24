@@ -3,24 +3,34 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #20120F;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
    <children>
-      <Button fx:id="backButton" layoutX="529.0" layoutY="361.0" mnemonicParsing="false" onAction="#Back" text="Back" />
-      <Button fx:id="addButton" layoutX="437.0" layoutY="328.0" mnemonicParsing="false" onAction="#AddMovie" text="Add" />
-      <TextField fx:id="movieTitle" layoutX="243.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="title" />
-      <TextField fx:id="movieDate" layoutX="341.0" layoutY="328.0" prefHeight="25.0" prefWidth="90.0" promptText="date" />
+      <ImageView fitHeight="504.0" fitWidth="655.0" layoutX="420.0" layoutY="-18.0" opacity="0.67" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../cinema.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="20.0" layoutY="10.0" prefHeight="316.0" prefWidth="391.0" style="-fx-background-color: #9C2B27;" />
+      <AnchorPane layoutX="20.0" layoutY="331.0" prefHeight="58.0" prefWidth="391.0" style="-fx-background-color: #9C2B27;" />
+      <Button fx:id="addButton" layoutX="206.0" layoutY="336.0" mnemonicParsing="false" onAction="#AddMovie" style="-fx-background-color: #E45652;" text="Add" textFill="WHITE" />
+      <TextField fx:id="movieTitle" layoutX="25.0" layoutY="336.0" prefHeight="25.0" prefWidth="90.0" promptText="title" style="-fx-background-color: #E45652;" />
+      <TextField fx:id="movieDate" layoutX="115.0" layoutY="336.0" prefHeight="25.0" prefWidth="90.0" promptText="date" style="-fx-background-color: #E45652;" />
       <Text fx:id="errorMessage" fill="RED" layoutX="125.0" layoutY="378.0" strokeType="OUTSIDE" strokeWidth="0.0" />
       <ListView fx:id="userList" layoutX="25.0" layoutY="14.0" prefHeight="307.0" prefWidth="200.0" />
-      <Button fx:id="addUserButton" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onAction="#Add" text="Add" />
-      <Button fx:id="removeUserButton" layoutX="292.0" layoutY="14.0" mnemonicParsing="false" onAction="#Remove" text="Remove" />
-      <TextField fx:id="username" layoutX="243.0" layoutY="48.0" prefHeight="25.0" prefWidth="78.0" promptText="username" />
-      <TextField fx:id="password" layoutX="321.0" layoutY="48.0" prefHeight="25.0" prefWidth="78.0" promptText="password" />
-      <TextField fx:id="searchUsername" layoutX="243.0" layoutY="143.0" prefHeight="25.0" prefWidth="136.0" promptText="username" />
-      <Button fx:id="Search" layoutX="241.0" layoutY="109.0" mnemonicParsing="false" onAction="#Search" text="Search" />
-      <Button fx:id="isAdminButton" layoutX="241.0" layoutY="188.0" mnemonicParsing="false" onAction="#isAdminSearch" text="Show admin users" />
-      <Button fx:id="isUserButton" layoutX="241.0" layoutY="222.0" mnemonicParsing="false" onAction="#isUserSearch" text="Show users" />
+      <Button fx:id="addUserButton" layoutX="243.0" layoutY="14.0" mnemonicParsing="false" onAction="#Add" style="-fx-background-color: #E45652;" text="Add" textFill="WHITE" />
+      <Button fx:id="removeUserButton" layoutX="292.0" layoutY="14.0" mnemonicParsing="false" onAction="#Remove" style="-fx-background-color: #E45652;" text="Remove" textFill="WHITE" />
+      <TextField fx:id="username" layoutX="243.0" layoutY="48.0" prefHeight="25.0" prefWidth="78.0" promptText="username" style="-fx-background-color: #E45652;" />
+      <TextField fx:id="password" layoutX="321.0" layoutY="48.0" prefHeight="25.0" prefWidth="78.0" promptText="password" style="-fx-background-color: #E45652;" />
+      <TextField fx:id="searchUsername" layoutX="243.0" layoutY="143.0" prefHeight="25.0" prefWidth="136.0" promptText="username" style="-fx-background-color: #E45652;" />
+      <Button fx:id="Search" layoutX="241.0" layoutY="109.0" mnemonicParsing="false" onAction="#Search" style="-fx-background-color: #E45652;" text="Search" textFill="WHITE" />
+      <Button fx:id="isAdminButton" layoutX="241.0" layoutY="188.0" mnemonicParsing="false" onAction="#isAdminSearch" style="-fx-background-color: #E45652;" text="Show admin users" textFill="WHITE" />
+      <Button fx:id="isUserButton" layoutX="241.0" layoutY="222.0" mnemonicParsing="false" onAction="#isUserSearch" style="-fx-background-color: #E45652;" text="Show users" textFill="WHITE" />
+      <Button fx:id="backButton" layoutX="645.0" layoutY="366.0" mnemonicParsing="false" onAction="#Back" style="-fx-background-color: #E45652;" text="Back" textFill="WHITE" />
    </children>
 </Pane>

@@ -7,7 +7,7 @@
             <password>admin</password>
             <created>2020-05-23T13:09:55.827+02:00</created>
             <admin>true</admin>
-            <loggedIn>true</loggedIn>
+            <loggedIn>false</loggedIn>
         </user>
         <user>
             <id>8e8c4b6d-feb6-47fd-867b-6bb8edf16fd5</id>
