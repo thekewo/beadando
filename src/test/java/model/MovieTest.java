@@ -1,4 +1,5 @@
-import model.Movie;
+package model;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -40,6 +41,6 @@ public class MovieTest {
     @Test
     void testgetFav() {
         underTest.getFav().add("testUser");
-        assertEquals("newTitle", underTest.getFav().get(0));
+        assertEquals("testUser", underTest.getFav().get(0));
     }
 }

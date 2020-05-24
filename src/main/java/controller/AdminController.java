@@ -26,9 +26,6 @@ import java.io.IOException;
 import java.text.ParseException;
 
 public class AdminController {
-    /**
-     * FXML elements
-     */
     @FXML
     public Button backButton;
     @FXML

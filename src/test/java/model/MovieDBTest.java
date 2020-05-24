@@ -1,5 +1,5 @@
-import model.Movie;
-import model.MovieDB;
+package model;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -23,13 +23,13 @@ public class MovieDBTest {
     void testgetMovies() throws ParseException {
         List<Movie> movies = new ArrayList<>();
         movies.add(new Movie("title","2020"));
-        assertEquals(movies, underTest.getMovies());
+        assertEquals(movies.get(0).getTitle(), underTest.getMovies().get(0).getTitle());
     }
 
     @Test
     void testgetMovie() throws ParseException {
         Movie movie = new Movie("title","2020");
-        assertEquals(movie, underTest.getMovie("title"));
+        assertEquals(movie.getTitle(), underTest.getMovie("title").getTitle());
     }
 
     @Test
@@ -42,7 +42,8 @@ public class MovieDBTest {
 
     @Test
     void testSearch() throws ParseException {
-        assertEquals(true, underTest.Search("title"));
-        assertEquals(false, underTest.Search("title2"));
+        var empty = new ArrayList<String>();
+        assertEquals("title", underTest.Search("title").get(0));
+        assertEquals(empty, underTest.Search("title2"));
     }
 }

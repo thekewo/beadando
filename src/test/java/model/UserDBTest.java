@@ -1,7 +1,5 @@
-import model.Movie;
-import model.MovieDB;
-import model.User;
-import model.UserDB;
+package model;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -34,7 +32,7 @@ public class UserDBTest {
         User user = new User("username","password");
         user.setLoggedIn(true);
         underTest.getUser("username").setLoggedIn(true);
-        assertEquals(user, underTest.GetLoggedInUser());
+        assertEquals(user.getUsername(), underTest.GetLoggedInUser().getUsername());
     }
 
     @Test
@@ -50,9 +48,9 @@ public class UserDBTest {
         User user = new User("username","password");
         user.setLoggedIn(true);
         underTest.getUser("username").setLoggedIn(true);
-        assertEquals(user, underTest.GetLoggedInUser());
+        assertEquals(user.getUsername(), underTest.GetLoggedInUser().getUsername());
         underTest.LogoutUsers();
-        assertNotEquals(user, underTest.GetLoggedInUser());
+        assertNull(underTest.GetLoggedInUser());
     }
 
     @Test
